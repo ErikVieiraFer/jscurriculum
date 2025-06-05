@@ -1,0 +1,193 @@
+/* Reset básico (mantenha o que você já tinha) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Exemplo de fonte moderna */
+    line-height: 1.6;
+    color: #2b1331;
+    background-color: #f8f9fa; /* Um cinza bem claro */
+    margin: 0; /* Removido o padding do body, vamos controlar por seções */
+}
+
+/* Cabeçalho do Currículo */
+.curriculo-header {
+    background: #2e1d36; /* Um cinza escuro, quase preto */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex; /* Para alinhar foto e info lado a lado, se usar foto */
+    flex-direction: column; /* Padrão empilhado */
+    align-items: center;
+}
+
+.curriculo-header .foto-perfil img { /* Estilo para a foto, se você adicionar */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #adb5bd; /* Borda cinza clara */
+    margin-bottom: 15px;
+}
+
+.curriculo-header .info-pessoal h1 {
+    margin-bottom: 4px;
+    font-size: 2.8em;
+    color: #ee830a;
+
+}
+
+.curriculo-header .info-pessoal p {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #00bcd4;
+}
+
+.curriculo-header .info-pessoal p a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+.curriculo-header .info-pessoal p a:hover {
+    text-decoration: underline;
+}
+
+.curriculo-header .links-rapidos {
+    margin-top: 15px;
+}
+
+.curriculo-header .links-rapidos a {
+    color: #ffeb3b;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 1px solid #ffeb3b; /* Borda sutil */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.curriculo-header .links-rapidos a:hover {
+    background-color: #f8f9fa;
+    color: #2e1d36;
+}
+
+/* Corpo Principal */
+main {
+    max-width: 900px; /* Limita a largura para melhor leitura */
+    margin: 30px auto; /* Centraliza o conteúdo principal */
+    padding: 0 20px;
+}
+
+main section {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #2e1d366c;
+}
+
+main h2 {
+    color: #3c0d88; /* Azul vibrante para títulos de seção */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* Seção de Experiência */
+.experiencia-item, .formacao-item {
+    margin-bottom: 40px;
+}
+
+.experiencia-item:last-child, .formacao-item:last-child {
+    margin-bottom: 0;
+}
+
+.experiencia-item h3, .formacao-item h3 {
+    color: #2e1d36;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.experiencia-item .periodo, .formacao-item p:nth-of-type(1) { /* Seleciona o parágrafo do período/curso */
+    font-style: italic;
+    color: #6c757d; /* Cinza médio */
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.experiencia-item ul {
+    list-style: disc; /* Marcadores de bolinha */
+    padding-left: 20px; /* Recuo para a lista */
+}
+
+.experiencia-item ul li {
+    margin-bottom: 5px;
+}
+
+/* Seção de Habilidades */
+.habilidades-categorias {
+    display: flex; /* Coloca as categorias lado a lado */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 20px; /* Espaço entre as categorias */
+}
+
+.habilidades-categorias .categoria {
+    flex: 1; /* Tenta distribuir o espaço igualmente */
+    min-width: 250px; /* Largura mínima antes de quebrar */
+    background-color: #f8f9fa; /* Fundo levemente diferente */
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.habilidades-categorias .categoria h3 {
+    color: #2e1d36; /* Cinza escuro para o título da categoria */
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ced4da;
+    padding-bottom: 5px;
+}
+
+.habilidades-categorias .categoria ul {
+    list-style: none; /* Remove marcadores padrão */
+    padding-left: 0;
+}
+
+.habilidades-categorias .categoria ul li {
+    margin-bottom: 5px;
+    padding: 3px 0;
+}
+
+/* Seção de Contato (pode manter ou adaptar o estilo anterior) */
+#contato ul {
+    list-style: none;
+}
+
+#contato ul li {
+    margin-bottom: 8px;
+}
+
+#contato ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#contato ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #343a40; /* Mesmo fundo do header */
+    color: #adb5bd; /* Cor mais suave para o texto do rodapé */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
