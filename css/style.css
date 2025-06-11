@@ -1,4 +1,5 @@
-/* Reset básico (mantenha o que você já tinha) */
+/* PASSO 2: O CSS foi atualizado para remover a regra extra no e-mail */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,51 +7,33 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Exemplo de fonte moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #2b1331;
-    background-color: #f8f9fa; /* Um cinza bem claro */
-    margin: 0; /* Removido o padding do body, vamos controlar por seções */
+    background-color: #f8f9fa;
+    margin: 0;
 }
 
-/* Cabeçalho do Currículo */
 .curriculo-header {
-    background: #2e1d36; /* Um cinza escuro, quase preto */
+    background: #2e1d36;
     color: #fff;
     padding: 30px 20px;
     text-align: center;
-    display: flex; /* Para alinhar foto e info lado a lado, se usar foto */
-    flex-direction: column; /* Padrão empilhado */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.curriculo-header .foto-perfil img { /* Estilo para a foto, se você adicionar */
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #adb5bd; /* Borda cinza clara */
-    margin-bottom: 15px;
 }
 
 .curriculo-header .info-pessoal h1 {
     margin-bottom: 4px;
     font-size: 2.8em;
     color: #ee830a;
-
 }
 
 .curriculo-header .info-pessoal p {
     margin-bottom: 8px;
     font-size: 1em;
     color: #00bcd4;
-}
-
-.curriculo-header .info-pessoal p a {
-    color: #00bcd4;
-    text-decoration: none;
-}
-.curriculo-header .info-pessoal p a:hover {
-    text-decoration: underline;
 }
 
 .curriculo-header .links-rapidos {
@@ -62,7 +45,7 @@ body {
     text-decoration: none;
     margin: 0 10px;
     padding: 5px 10px;
-    border: 1px solid #ffeb3b; /* Borda sutil */
+    border: 1px solid #ffeb3b;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -72,10 +55,36 @@ body {
     color: #2e1d36;
 }
 
-/* Corpo Principal */
+.acoes-curriculo {
+    margin-top: 25px;
+}
+
+.botao-imprimir {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #2e1d36;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-imprimir:hover {
+    background-color: #0097a7;
+}
+
+.botao-imprimir svg {
+    margin-right: 8px;
+}
+
 main {
-    max-width: 900px; /* Limita a largura para melhor leitura */
-    margin: 30px auto; /* Centraliza o conteúdo principal */
+    max-width: 900px;
+    margin: 30px auto;
     padding: 0 20px;
 }
 
@@ -88,106 +97,133 @@ main section {
 }
 
 main h2 {
-    color: #3c0d88; /* Azul vibrante para títulos de seção */
+    color: #3c0d88;
     margin-bottom: 20px;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #3c0d88;
     padding-bottom: 10px;
     font-size: 1.8em;
 }
 
-/* Seção de Experiência */
 .experiencia-item, .formacao-item {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-
-.experiencia-item:last-child, .formacao-item:last-child {
+.experiencia-item:last-of-type, .formacao-item:last-of-type {
     margin-bottom: 0;
 }
-
 .experiencia-item h3, .formacao-item h3 {
     color: #2e1d36;
     margin-bottom: 5px;
-    font-size: 1em;
+    font-size: 1.1em;
 }
-
-.experiencia-item .periodo, .formacao-item p:nth-of-type(1) { /* Seleciona o parágrafo do período/curso */
+.experiencia-item .periodo, .formacao-item p:nth-of-type(1) {
     font-style: italic;
-    color: #6c757d; /* Cinza médio */
+    color: #6c757d;
     margin-bottom: 8px;
     font-size: 0.95em;
 }
+.experiencia-item ul { list-style: disc; padding-left: 20px; }
+.experiencia-item ul li { margin-bottom: 5px; }
 
-.experiencia-item ul {
-    list-style: disc; /* Marcadores de bolinha */
-    padding-left: 20px; /* Recuo para a lista */
-}
+.habilidades-categorias { display: flex; flex-wrap: wrap; gap: 20px; }
+.habilidades-categorias .categoria { flex: 1; min-width: 250px; background-color: #f8f9fa; padding: 15px; border-radius: 6px; border: 1px solid #e9ecef; }
+.habilidades-categorias .categoria h3 { color: #2e1d36; margin-bottom: 10px; font-size: 1.1em; border-bottom: 1px solid #ced4da; padding-bottom: 5px; }
+.habilidades-categorias .categoria ul { list-style: none; padding-left: 0; }
+.habilidades-categorias .categoria ul li { margin-bottom: 5px; padding: 3px 0; }
 
-.experiencia-item ul li {
-    margin-bottom: 5px;
-}
+#contato ul { list-style: none; padding: 0; }
+#contato ul li { margin-bottom: 8px; }
+#contato ul li a { text-decoration: none; color: #007bff; }
+#contato ul li a:hover { text-decoration: underline; }
 
-/* Seção de Habilidades */
-.habilidades-categorias {
-    display: flex; /* Coloca as categorias lado a lado */
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    gap: 20px; /* Espaço entre as categorias */
-}
-
-.habilidades-categorias .categoria {
-    flex: 1; /* Tenta distribuir o espaço igualmente */
-    min-width: 250px; /* Largura mínima antes de quebrar */
-    background-color: #f8f9fa; /* Fundo levemente diferente */
-    padding: 15px;
-    border-radius: 6px;
-    border: 1px solid #e9ecef;
-}
-
-.habilidades-categorias .categoria h3 {
-    color: #2e1d36; /* Cinza escuro para o título da categoria */
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    border-bottom: 1px solid #ced4da;
-    padding-bottom: 5px;
-}
-
-.habilidades-categorias .categoria ul {
-    list-style: none; /* Remove marcadores padrão */
-    padding-left: 0;
-}
-
-.habilidades-categorias .categoria ul li {
-    margin-bottom: 5px;
-    padding: 3px 0;
-}
-
-/* Seção de Contato (pode manter ou adaptar o estilo anterior) */
-#contato ul {
-    list-style: none;
-}
-
-#contato ul li {
-    margin-bottom: 8px;
-}
-
-#contato ul li a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-#contato ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Rodapé */
 footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background: #343a40; /* Mesmo fundo do header */
-    color: #adb5bd; /* Cor mais suave para o texto do rodapé */
+    background: #2e1d36;
+    color: #adb5bd;
     font-size: 0.9em;
 }
+footer p { margin-bottom: 5px; }
 
-footer p {
-    margin-bottom: 5px;
+/* Cabeçalho de Impressão escondido na tela normal */
+.print-header {
+    display: none;
+}
+
+
+/* Estilos de Impressão Refinados */
+@media print {
+    @page {
+        margin: 1.5cm;
+    }
+
+    /* Mostra o cabeçalho de impressão e o estiliza */
+    .print-header {
+        display: block;
+        text-align: center;
+        margin-bottom: 1cm;
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.5cm;
+    }
+    .print-header h1 {
+        font-size: 22pt;
+        color: #000;
+    }
+    .print-header p {
+        font-size: 12pt;
+        color: #333;
+    }
+
+    /* Esconde elementos desnecessários da tela */
+    .curriculo-header,
+    footer {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 11pt;
+        background-color: #fff;
+        line-height: 1.4;
+    }
+
+    main {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    main section {
+        box-shadow: none;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+        margin: 0;
+    }
+    main section:last-of-type {
+        border-bottom: none;
+    }
+
+    main h2 {
+        font-size: 16pt;
+        color: #000 !important;
+        border: none;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    main h3 {
+        font-size: 12pt;
+    }
+
+    .experiencia-item,
+    .formacao-item,
+    .categoria {
+        page-break-inside: avoid;
+    }
+    
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+    
+   
 }
