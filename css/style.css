@@ -106,7 +106,7 @@ body {
     justify-content: center;
 }
 
-.botao-imprimir {
+.botao-principal {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -121,11 +121,11 @@ body {
     transition: background-color 0.3s;
 }
 
-.botao-imprimir:hover {
+.botao-principal:hover {
     background-color: var(--cor-fundo-botao-hover);
 }
 
-.botao-imprimir svg {
+.botao-principal svg {
     margin-right: 8px;
 }
 
@@ -353,14 +353,14 @@ footer p { margin-bottom: 5px; }
 
 
 
-.botao-imprimir,
+.botao-principal,
 .experiencia-item,
 .formacao-item {
     transition: all 0.3s ease-in-out;
 }
 
 
-.botao-imprimir:hover {
+.botao-principal:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

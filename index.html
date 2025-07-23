@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Erik Vieira Ferreira</title>
+    <title>Resume - Erik Vieira Ferreira</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,24 +13,28 @@
         </div>
         <div class="info-pessoal">
             <h1>Erik Vieira Ferreira</h1>
-            <p>Desenvolvedor Full-Stack | Espírito Santo</p>
+            <p data-lang-key="jobTitle">Desenvolvedor Full-Stack | Espírito Santo</p>
             
             <nav class="links-rapidos">
-                <a href="#resumo">Resumo</a>
-                <a href="#experiencia">Experiência</a>
-                <a href="#formacao">Formação</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#contato">Contato</a>
+                <a href="#resumo" data-lang-key="navSummary">Resumo</a>
+                <a href="#experiencia" data-lang-key="navExperience">Experiência</a>
+                <a href="#formacao" data-lang-key="navEducation">Formação</a>
+                <a href="#habilidades" data-lang-key="navSkills">Habilidades</a>
+                <a href="#contato" data-lang-key="navContact">Contato</a>
             </nav>
 
             <div class="acoes-curriculo">
-                <button id="btn-imprimir" class="botao-imprimir">
+                <button id="btn-imprimir" class="botao-principal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-                    <span>Salvar como PDF</span>
+                    <span data-lang-key="saveAsPdf">Salvar como PDF</span>
                 </button>
-                <button id="btn-tema" class="botao-tema" title="Alternar tema">
+                <button id="btn-tema" class="botao-tema" title="Alternar tema" data-lang-key-title="toggleThemeTitle">
                     <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button id="btn-idioma" class="botao-principal" title="Change Language / Mudar Idioma">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    <span>PT/EN</span>
                 </button>
             </div>
         </div>
@@ -40,7 +44,7 @@
         
         <div class="print-header">
             <h1>Erik Vieira Ferreira</h1>
-            <p>Desenvolvedor Full-Stack | Espírito Santo</p>
+            <p data-lang-key="jobTitlePrint">Desenvolvedor Full-Stack | Espírito Santo</p>
             <div class="print-contact-details">
                 <ul>
                     <li>
@@ -66,8 +70,8 @@
         </div>
 
         <section id="resumo">
-            <h2>Resumo Profissional</h2>
-            <p>
+            <h2 data-lang-key="summaryTitle">Resumo Profissional</h2>
+            <p data-lang-key="summaryParagraph">
                 Desenvolvedor Full-Stack, com paixão por Back-End, com foco em Flutter e Dart, cursando Análise e Desenvolvimento de Sistemas
                 (Multivix - EAD). Organizado e comunicativo, desenvolvi projetos como o TechTaste e Calculadora IMC, aplicando Clean Architeture, Scrum, Git e gerenciamento de 
                 estado. Busco oportunidades para contribuir em equipes ágeis e com foco em melhoria contínua.
@@ -75,12 +79,12 @@
         </section>
 
         <section id="experiencia">
-            <h2>Experiência Profissional</h2>
+            <h2 data-lang-key="experienceTitle">Experiência Profissional</h2>
             <article class="experiencia-item">
                 <h3>CONQUANT CONSULTORIA QUANTITATIVA LTDA</h3>
-                <p class="periodo">01/2025 – o momento | Desenvolvedor Full-Stack – Freelancer</p>
+                <p class="periodo" data-lang-key="exp1Period">01/2025 – o momento | Desenvolvedor Full-Stack – Freelancer</p>
                 <ul>
-                    <li>A desenvolver uma solução completa de gestão de estoque! App multiplataforma em Flutter com 
+                    <li data-lang-key="exp1Desc1">A desenvolver uma solução completa de gestão de estoque! App multiplataforma em Flutter com 
 arquitetura limpa, usando BLoC/Cubit para a gestão de estado e SQLite para uma robusta 
 funcionalidade offline-first. O backend em Python com Django REST Framework garante a 
 sincronização de dados online. </li>
@@ -99,50 +103,50 @@ sincronização de dados online. </li>
             </article>
             <article class="experiencia-item">
                 <h3>Oasis Infobyte</h3>
-                <p class="periodo">04/2025 – 06/2025 | Android Application Development – Intern</p>
+                <p class="periodo" data-lang-key="exp2Period">04/2025 – 06/2025 | Android Application Development – Intern</p>
                 <ul>
-                    <li>Desenvolvimento de aplicação Android utilizando Java - JDK 18.</li>
+                    <li data-lang-key="exp2Desc1">Desenvolvimento de aplicação Android utilizando Java - JDK 18.</li>
                     <li>Android Studio.</li>
                     <li>Linux (Ubuntu).</li>
                 </ul>
             </article>
             <article class="experiencia-item">
                 <h3>Cartório do Terceiro Ofício de Notas de Cariacica</h3>
-                <p class="periodo">02/2022 – 03/2025 | Escrevente</p>
+                <p class="periodo" data-lang-key="exp3Period">02/2022 – 03/2025 | Escrevente</p>
                 <ul>
-                    <li>Realização de atos notariais como Escrituras Diversas, Atas Notariais, Usucapião e demais. Passei por diversos 
+                    <li data-lang-key="exp3Desc1">Realização de atos notariais como Escrituras Diversas, Atas Notariais, Usucapião e demais. Passei por diversos 
                         setores, desde atendimento básico do balcão, a responsável pelo setor de Procuração, desempenhando um 
                         papel de organização de demandas e distribuição de prazos, e realizando treinamentos aos demais colegas de
                         equipe, bem como treinamento de novos integrantes para o time. Por fim, cheguei a responsável pelo setor de Atas 
                         Notariais e Escrituras Diversas, onde desempenhei um papel ainda mais difícil, com atos mais complexos e
                         com contato direto a clientes importantes para o Cartório.</li>
-                    </ul>
+                </ul>
             </article>
         </section>
 
         <section id="formacao">
-            <h2>Formação Acadêmica</h2>
+            <h2 data-lang-key="educationTitle">Formação Acadêmica</h2>
             <article class="formacao-item">
                 <h3>Faculdade Multivix - EAD</h3>
-                <p>Análise e Desenvolvimento de Sistemas – Cursando - Término: 06/2026</p>
-                <p>Lógica, algoritmos e programação, principalmente em C#. Desenvolvimento de sistemas web com HTML, CSS e Bootstrap,
+                <p data-lang-key="edu1Course">Análise e Desenvolvimento de Sistemas – Cursando - Término: 06/2026</p>
+                <p data-lang-key="edu1Desc">Lógica, algoritmos e programação, principalmente em C#. Desenvolvimento de sistemas web com HTML, CSS e Bootstrap,
                     JavaScript e jQuery, PHP e C#. Gerenciamento de bancos de dados e aplicação de engenharia de software
                     para construir aplicações robustas e eficientes. Tudo para resolver problemas reais com tecnologia.</p>
                 </article>
 
                 <article class="formacao-item">
                 <h3>Academia do Flutter</h3>
-                <p>Curso completo de Flutter – 08/2024 – Em andamento</p>
-                <p>Fundamentos de Dart (POO, Async, APIs) e Flutter (Fundamentos, Storages, Gerenciamento de Estado, 
+                <p data-lang-key="edu2Course">Curso completo de Flutter – 08/2024 – Em andamento</p>
+                <p data-lang-key="edu2Desc">Fundamentos de Dart (POO, Async, APIs) e Flutter (Fundamentos, Storages, Gerenciamento de Estado, 
                     Provider, Packages e Firebase e mais).</p>
                 </article>
             </section>
 
         <section id="habilidades">
-            <h2>Habilidades</h2>
+            <h2 data-lang-key="skillsTitle">Habilidades</h2>
             <div class="habilidades-categorias">
                 <div class="categoria">
-                    <h3>Linguagens & Frameworks</h3>
+                    <h3 data-lang-key="skillsCat1">Linguagens & Frameworks</h3>
                     <ul>
                         <li>Flutter (Dart)</li>
                         <li>HTML5</li>
@@ -157,7 +161,7 @@ sincronização de dados online. </li>
                         </ul>
                 </div>
                 <div class="categoria">
-                    <h3>Ferramentas & Plataformas</h3>
+                    <h3 data-lang-key="skillsCat2">Ferramentas & Plataformas</h3>
                     <ul>
                         <li>Git & GitHub</li>
                         <li>VS Code</li>
@@ -166,18 +170,18 @@ sincronização de dados online. </li>
                         </ul>
                 </div>
                 <div class="categoria">
-                    <h3>Outras</h3>
+                    <h3 data-lang-key="skillsCat3">Outras</h3>
                     <ul>
                         <li>Metodologias Ágeis (Scrum/Kanban)</li>
-                        <li>Inglês - Intermediário</li>
+                        <li data-lang-key="skillsOther1">Inglês - Intermediário</li>
                         </ul>
                 </div>
             </div>
         </section>
 
         <section id="contato">
-            <h2>Contato</h2>
-            <p>Estou disponível para novas oportunidades e colaborações. Entre em contato:</p>
+            <h2 data-lang-key="contactTitle">Contato</h2>
+            <p data-lang-key="contactIntro">Estou disponível para novas oportunidades e colaborações. Entre em contato:</p>
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/erik-vieira-bb3298332/" target="_blank" title="LinkedIn">
@@ -202,10 +206,11 @@ sincronização de dados online. </li>
     </main>
 
     <footer>
-        <p>&copy; <span id="ano-atual"></span> Erik Vieira. Todos os direitos reservados.</p>
-        <p>Este currículo foi construído com HTML, CSS e JavaScript como parte do meu aprendizado.</p>
+        <p>&copy; <span id="ano-atual"></span> Erik Vieira. <span data-lang-key="footerRights">Todos os direitos reservados.</span></p>
+        <p data-lang-key="footerBuiltWith">Este currículo foi construído com HTML, CSS e JavaScript como parte do meu aprendizado.</p>
     </footer>
 
+    <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

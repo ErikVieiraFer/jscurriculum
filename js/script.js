@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sections.forEach(section => observer.observe(section));
 
-    // --- FUNCIONALIDADE DE TEMA ESCURO ---
+    
     const botaoTema = document.getElementById('btn-tema');
     const body = document.body;
 
-    // Verifica se há um tema salvo no localStorage
+    
     const temaSalvo = localStorage.getItem('theme');
     if (temaSalvo === 'dark') {
         body.classList.add('dark-mode');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         botaoTema.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
 
-            // Salva a preferência do usuário no localStorage
+            
             if (body.classList.contains('dark-mode')) {
                 localStorage.setItem('theme', 'dark');
             } else {
@@ -63,4 +63,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    
+    const botaoIdioma = document.getElementById('btn-idioma');
+    const htmlEl = document.documentElement;
+
+    /**
+     * Define o idioma da página, atualizando todos os textos e atributos necessários.
+     * @param {string} language - O código do idioma a ser aplicado (ex: 'pt-BR', 'en-US').
+     */
+    const setLanguage = (language) => {
+        
+        if (!translations || !translations[language]) {
+            console.error(`Traduções para o idioma "${language}" não encontradas.`);
+            return;
+        }
+
+        
+        htmlEl.setAttribute('lang', language);
+
+        
+        document.querySelectorAll('[data-lang-key]').forEach(element => {
+            const key = element.dataset.langKey;
+            element.textContent = translations[language][key] || element.textContent;
+        });
+
+        
+        document.querySelectorAll('[data-lang-key-title]').forEach(element => {
+            const key = element.dataset.langKeyTitle;
+            element.setAttribute('title', translations[language][key] || element.title);
+        });
+
+        
+        localStorage.setItem('language', language);
+    };
+
+    
+    botaoIdioma?.addEventListener('click', () => {
+        const newLang = htmlEl.getAttribute('lang') === 'pt-BR' ? 'en-US' : 'pt-BR';
+        setLanguage(newLang);
+    });
+
+    
+    const savedLang = localStorage.getItem('language') || 'en-US';
+    setLanguage(savedLang);
 });
